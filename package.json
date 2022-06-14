@@ -1,0 +1,16 @@
+{
+  "name": "ts-study2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "app": "node ./compiled/Main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^4.7.3"
+  }
+}
