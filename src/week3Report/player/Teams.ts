@@ -1,6 +1,6 @@
 export enum Teams {
-    GANGWON = "GANGWON",
-    SEOUL = "SEOUL",
-    INCHEON = "INCHEON",
-    NA = "N/A"
+    GANGWON = "Gangwon FC",
+    SEOUL = "FC SEOUL",
+    INCHEON = "Incheon United",
+    NA = "Not Available"
 }

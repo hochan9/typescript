@@ -1,6 +1,7 @@
 import {FreeAgent} from "../agent/FreeAgent";
 import {Teams} from "./Teams";
 import {Agent} from "../agent/Agent";
+import {PlayerBuilder} from "./PlayerBuilder";
 
 export class Player {
     private name: string;
@@ -8,11 +9,11 @@ export class Player {
     private contractPeriodMonth: number;
     private agent: Agent;
 
-    constructor(name: string) {
-        this.name = name;
-        this.team = Teams.NA;
-        this.contractPeriodMonth = 0;
-        this.agent = new Agent();
+    constructor(builder: PlayerBuilder) {
+        this.name = builder.name;
+        this.team = builder.team;
+        this.contractPeriodMonth = builder.contractPeriodMonth;
+        this.agent = builder.agent;
     }
 
     introduce(): void{

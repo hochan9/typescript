@@ -97,11 +97,22 @@
 // const types_code: TypesClientCode = new TypesClientCode();
 // types_code.consume();
 
-import {Player} from "./week3Report/player/Player";
 import {Agent} from "./week3Report/agent/Agent";
 import {Teams} from "./week3Report/player/Teams";
+import {PlayerBuilder} from "./week3Report/player/PlayerBuilder";
+import {FreeAgent} from "./week3Report/agent/FreeAgent";
+import {TransferMarketSimulator} from "./week3Report/player/TransferMarketSimulator";
 
-const player: Player = new Player("hochan");
+// const player: Player = new Player("hochan");
+
+const playerBuilder = new PlayerBuilder("hochan");
+
+
+playerBuilder.setTeam(Teams.NA);
+playerBuilder.setAgent(new FreeAgent());
+playerBuilder.setContractPeriodMonth(0);
+
+const player = playerBuilder.build();
 
 player.introduce();
 
@@ -115,4 +126,8 @@ player.introduce();
 
 player.managedBy(new Agent("KOREA"));
 player.introduce();
+
+const simulator = TransferMarketSimulator.getInstance();
+
+simulator.simulate();
 
